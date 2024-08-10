@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:layoutapp/pages/natural_wonders_page.dart';
 import 'package:layoutapp/utils/colors.dart';
-import 'package:layoutapp/widgets/home_page/cart.dart';
+import 'package:layoutapp/widgets/reuserble/home_page/cart.dart';
 
 class homePage extends StatelessWidget {
   const homePage({super.key});
@@ -44,50 +45,58 @@ class homePage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility of scenic landscapes, the allure of historical landmarks, or the excitement of vibrant cities, our curated collection of places to visit offers something for every traveler.",
                   style: TextStyle(fontSize: 16, color: mainTextColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Image.asset("assets/main.jpg",
-                width: double.infinity,
-                fit: BoxFit.cover,
+                Image.asset(
+                  "assets/main.jpg",
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text("Select a Place from the categories",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  color: mainColor,
+                const Text(
+                  "Select a Place from the categories",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    color: mainColor,
+                  ),
                 ),
-                ),
-                   SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    cart(
-                      cartBackgrouncolor: firstCatgeroycolor,
-                      name: "Natural Wonders",
-                      cartWidth: 190,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>naturalWondersPage()));
+                      },
+                      child: cart(
+                        cartBackgrouncolor: firstCatgeroycolor,
+                        name: "Natural Wonders",
+                        cartWidth: 190,
+                      ),
                     ),
-                     cart(
+                    cart(
                       cartBackgrouncolor: firstCatgeroycolor,
                       name: "Nightlife",
                       cartWidth: 190,
                     ),
                   ],
-                ),   SizedBox(
+                ),
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     cart(
@@ -95,18 +104,21 @@ class homePage extends StatelessWidget {
                       name: "Landmarks",
                       cartWidth: 190,
                     ),
-                     cart(
+                    cart(
                       cartBackgrouncolor: seconedCatgeroycolor,
                       name: "Cultural",
                       cartWidth: 190,
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                cart(cartBackgrouncolor: thirddCatgeroycolor, cartWidth: 400, name: "Book For A Ride Today!"),
-                 SizedBox(
+                const cart(
+                    cartBackgrouncolor: thirddCatgeroycolor,
+                    cartWidth: 400,
+                    name: "Book For A Ride Today!"),
+                const SizedBox(
                   height: 20,
                 ),
               ],
