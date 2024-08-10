@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:layoutapp/pages/natural_wonders_page.dart';
+import 'package:layoutapp/pages/nightlife_page.dart';
 import 'package:layoutapp/utils/colors.dart';
 import 'package:layoutapp/widgets/reuserble/home_page/cart.dart';
 
@@ -86,10 +87,15 @@ class homePage extends StatelessWidget {
                         cartWidth: 190,
                       ),
                     ),
-                    cart(
-                      cartBackgrouncolor: firstCatgeroycolor,
-                      name: "Nightlife",
-                      cartWidth: 190,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>nightLifePage()));
+                      },
+                      child: cart(
+                        cartBackgrouncolor: firstCatgeroycolor,
+                        name: "Nightlife",
+                        cartWidth: 190,
+                      ),
                     ),
                   ],
                 ),

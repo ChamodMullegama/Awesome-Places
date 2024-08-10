@@ -37,6 +37,8 @@ class naturalWondersPage extends StatelessWidget {
               imageCaart(
                 titel: "Nature Wonders Place-1",
                 imageurl:"assets/nature2.png" ,
+                isconerroundede: false,
+                tittelcolor: mainNaturalWondersColor,
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
               ),
                   SizedBox(
@@ -45,6 +47,8 @@ class naturalWondersPage extends StatelessWidget {
               imageCaart(
                 titel: "Nature Wonders Place-2",
                 imageurl:"assets/nature1.png" ,
+                tittelcolor: mainNaturalWondersColor,
+                isconerroundede: false,
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
               ),
                   SizedBox(
@@ -53,6 +57,8 @@ class naturalWondersPage extends StatelessWidget {
               imageCaart(
                 titel: "Nature Wonders Place-3",
                 imageurl:"assets/nature3.png" ,
+                tittelcolor: mainNaturalWondersColor,
+                isconerroundede: false,
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
               ),
             ],
