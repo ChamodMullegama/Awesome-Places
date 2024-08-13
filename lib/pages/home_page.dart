@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layoutapp/pages/Landmarks.dart';
 import 'package:layoutapp/pages/natural_wonders_page.dart';
 import 'package:layoutapp/pages/nightlife_page.dart';
 import 'package:layoutapp/utils/colors.dart';
@@ -102,13 +103,18 @@ class homePage extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    cart(
-                      cartBackgrouncolor: seconedCatgeroycolor,
-                      name: "Landmarks",
-                      cartWidth: 190,
+                    GestureDetector(
+                          onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LandmarksPage()));
+                      },
+                      child: cart(
+                        cartBackgrouncolor: seconedCatgeroycolor,
+                        name: "Landmarks",
+                        cartWidth: 190,
+                      ),
                     ),
                     cart(
                       cartBackgrouncolor: seconedCatgeroycolor,
