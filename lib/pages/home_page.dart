@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layoutapp/pages/Cultural_page.dart';
 import 'package:layoutapp/pages/Landmarks.dart';
 import 'package:layoutapp/pages/natural_wonders_page.dart';
 import 'package:layoutapp/pages/nightlife_page.dart';
@@ -116,10 +117,15 @@ class homePage extends StatelessWidget {
                         cartWidth: 190,
                       ),
                     ),
-                    cart(
-                      cartBackgrouncolor: seconedCatgeroycolor,
-                      name: "Cultural",
-                      cartWidth: 190,
+                    GestureDetector(
+                                 onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Culturalpage()));
+                      },
+                      child: cart(
+                        cartBackgrouncolor: seconedCatgeroycolor,
+                        name: "Cultural",
+                        cartWidth: 190,
+                      ),
                     ),
                   ],
                 ),
