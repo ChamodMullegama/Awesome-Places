@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layoutapp/pages/Cultural_page.dart';
 import 'package:layoutapp/pages/Landmarks.dart';
+import 'package:layoutapp/pages/bookings_page/bookings.dart';
 import 'package:layoutapp/pages/natural_wonders_page.dart';
 import 'package:layoutapp/pages/nightlife_page.dart';
 import 'package:layoutapp/utils/colors.dart';
@@ -132,10 +133,15 @@ class homePage extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const cart(
-                    cartBackgrouncolor: thirddCatgeroycolor,
-                    cartWidth: 400,
-                    name: "Book For A Ride Today!"),
+                 GestureDetector(
+                   onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>BookingsPage()));
+                      },
+                   child: cart(
+                      cartBackgrouncolor: thirddCatgeroycolor,
+                      cartWidth: 400,
+                      name: "Book For A Ride Today!"),
+                 ),
                 const SizedBox(
                   height: 20,
                 ),
