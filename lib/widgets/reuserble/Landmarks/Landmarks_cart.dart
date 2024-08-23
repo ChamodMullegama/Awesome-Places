@@ -18,7 +18,7 @@ class LandmarksCart extends StatelessWidget {
             child: Text(
               tittel,
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 19,
                 fontWeight: FontWeight.bold,
                 color: subLandmarks,
               ),
