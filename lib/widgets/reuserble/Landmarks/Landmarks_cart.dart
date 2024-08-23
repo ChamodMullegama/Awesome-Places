@@ -18,14 +18,14 @@ class LandmarksCart extends StatelessWidget {
             child: Text(
               tittel,
               style: TextStyle(
-                fontSize: 19,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: subLandmarks,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(9.0),
+            padding: const EdgeInsets.all(10.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
